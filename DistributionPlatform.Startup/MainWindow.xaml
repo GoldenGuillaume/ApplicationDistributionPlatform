@@ -8,7 +8,7 @@
         Title="Application Distribution Platform" Height="450" Width="800">
     <DockPanel>
         <DockPanel DockPanel.Dock="Top" Background="Gray">
-            <Button Height="35" Width="35" Margin="40,5,0,5" Background="Red" Cursor="Hand" Click="Navigation_Click" Tag="Home">
+            <Button x:Name="buttonHome" Height="35" Width="35" Margin="40,5,0,5" Background="Red" Cursor="Hand" Click="Navigation_Click" Tag="Home">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="25"/>
@@ -16,7 +16,7 @@
                 </Button.Resources>
                 <Image Source="/Resources/Images/home.png" Width="20" Height="20"/>
             </Button>
-            <Button Height="35" Width="35" Margin="25,5,0,5" Background="Green" Cursor="Hand" Click="Navigation_Click" Tag="Download">
+            <Button x:Name="buttonImport" Height="35" Width="35" Margin="25,5,0,5" Background="Green" Cursor="Hand" Click="Navigation_Click" Tag="Import">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="25"/>

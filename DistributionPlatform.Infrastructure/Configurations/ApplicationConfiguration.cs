@@ -13,6 +13,7 @@ namespace DistributionPlatform.Infrastructure.Configurations
 
             builder.HasKey(e => e.Id).HasName("id");
 
+            builder.Property(e => e.Id).UseIdentityAlwaysColumn();
             builder.Property(e => e.CreationDate).IsRequired().HasColumnName("creation_date").HasColumnType("timestamp").HasDefaultValueSql("now()");
             builder.Property(e => e.ApplicationName).IsRequired().HasColumnName("application_name").HasMaxLength(70);
             builder.Property(e => e.Thumbnail).IsRequired().HasColumnName("thumbnail");

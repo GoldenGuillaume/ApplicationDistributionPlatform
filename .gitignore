@@ -30,3 +30,4 @@ bld/
 *.sln.docstates
 
 appsettings.*.json
+/DistributionPlatform.Startup/Properties

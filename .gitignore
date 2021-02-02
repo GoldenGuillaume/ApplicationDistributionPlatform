@@ -28,3 +28,5 @@ bld/
 *.user
 *.userosscache
 *.sln.docstates
+
+appsettings.*.json

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DistributionPlatform.Infrastructure.Providers
 {
-    interface IApplicationsProvider
+    public interface IApplicationsProvider
     {
         void InsertApplication(Application application);
         Application GetApplication(int id);

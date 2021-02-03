@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace DistributionPlatform.Infrastructure.Providers
 {
-    public class ApplicationsProvider : BaseProvider<DistributionPlatformContext>, IApplicationsProvider
+    public class ApplicationsProvider : BaseProvider<Context.DistributionPlatformContext>, IApplicationsProvider
     {
-        public ApplicationsProvider(DistributionPlatformContext context) : base(context) { }
+        public ApplicationsProvider(Context.DistributionPlatformContext context) : base(context) { }
 
         public List<Application> GetAllApplications()
             => base._context.Applications.ToList();

@@ -1,7 +1,7 @@
 ﻿using DistributionPlatform.Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace DistributionPlatform.Infrastructure
+namespace DistributionPlatform.Infrastructure.Context
 {
     public class DistributionPlatformContext : DbContext
     {

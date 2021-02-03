@@ -15,13 +15,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.ViewMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Models", "DistributionPlatform.Models\DistributionPlatform.Models.csproj", "{D67DF0DD-E5AF-477C-9513-8F6BEF734763}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Infrastructure", "DistributionPlatform.Infrastructure\DistributionPlatform.Infrastructure.csproj", "{C5D2D5B7-3A37-4291-9421-2E9120D1F4AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Infrastructure.Context", "DistributionPlatform.Infrastructure.Context\DistributionPlatform.Infrastructure.Context.csproj", "{C5D2D5B7-3A37-4291-9421-2E9120D1F4AC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Infrastructure.Entities", "DistributionPlatform.Infrastructure.Entities\DistributionPlatform.Infrastructure.Entities.csproj", "{62F6B5D5-4315-406A-9747-152BE158A90C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure Layer", "Infrastructure Layer", "{2DAE2675-4E67-4A30-80B6-417CF23DE851}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributionPlatform.Infrastructure.Providers", "DistributionPlatform.Infrastructure.Providers\DistributionPlatform.Infrastructure.Providers.csproj", "{F44667BB-51D3-4516-8367-69F434077ECE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Infrastructure.Providers", "DistributionPlatform.Infrastructure.Providers\DistributionPlatform.Infrastructure.Providers.csproj", "{F44667BB-51D3-4516-8367-69F434077ECE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Core.Services", "DistributionPlatform.Core.Services\DistributionPlatform.Core.Services.csproj", "{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core layer", "Core layer", "{CF42942F-5B12-4F21-9EA6-5320493E91F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributionPlatform.Core.Interfaces", "DistributionPlatform.Core.Interfaces\DistributionPlatform.Core.Interfaces.csproj", "{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +59,14 @@ Global
 		{F44667BB-51D3-4516-8367-69F434077ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F44667BB-51D3-4516-8367-69F434077ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F44667BB-51D3-4516-8367-69F434077ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +75,8 @@ Global
 		{C5D2D5B7-3A37-4291-9421-2E9120D1F4AC} = {2DAE2675-4E67-4A30-80B6-417CF23DE851}
 		{62F6B5D5-4315-406A-9747-152BE158A90C} = {2DAE2675-4E67-4A30-80B6-417CF23DE851}
 		{F44667BB-51D3-4516-8367-69F434077ECE} = {2DAE2675-4E67-4A30-80B6-417CF23DE851}
+		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE} = {CF42942F-5B12-4F21-9EA6-5320493E91F2}
+		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780} = {CF42942F-5B12-4F21-9EA6-5320493E91F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9B0AECA-5D96-4399-A632-4ACA06CF7F91}

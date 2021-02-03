@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DistributionPlatform.Infrastructure.Configurations
+namespace DistributionPlatform.Infrastructure.Context.Configurations
 {
     internal class ApplicationConfiguration : IEntityTypeConfiguration<Application>
     {

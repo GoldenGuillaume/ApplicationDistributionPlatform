@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DistributionPlatform.Infrastructure\DistributionPlatform.Infrastructure.csproj" />
+    <ProjectReference Include="..\DistributionPlatform.Infrastructure.Context\DistributionPlatform.Infrastructure.Context.csproj" />
   </ItemGroup>
 
   <ItemGroup>

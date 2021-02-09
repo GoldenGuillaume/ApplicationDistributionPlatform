@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ namespace DistributionPlatform.Startup.Views
     {
         private string ThumbnailFileName { get; set; } = null;
         private string SourcesDirectoryName { get; set; } = null;
+        private string ApplicationName { get; set; } = null;
 
         public ImportView()
         {
@@ -46,7 +48,11 @@ namespace DistributionPlatform.Startup.Views
 
         void SaveApp_Click(object sender, RoutedEventArgs e)
         {
-            // get thumbnail and sources then save into database
+            this.ApplicationName = AppName.Text;
+            if (!string.IsNullOrWhiteSpace(this.ApplicationName) && !string.IsNullOrWhiteSpace(this.SourcesDirectoryName) && !string.IsNullOrWhiteSpace(this.ThumbnailFileName))
+            {
+                // get thumbnail and sources then save into database
+            }
         }
     }
 }

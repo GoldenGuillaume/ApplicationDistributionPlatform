@@ -18,26 +18,30 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Thumbnail:" Grid.Row="1" Grid.Column="1"/>
-        <WrapPanel Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
+        <Label Content="App Name:" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="AppName" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+
+        <Label Content="Thumbnail:" Grid.Row="2" Grid.Column="1"/>
+        <WrapPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
             <TextBlock x:Name="thumbnailFileName" Text="No file choosen"/>
             <Button Cursor="Hand" Click="ThumbnailImport_Click">
                 <Image Source="/Resources/Images/download.png" Width="10" Height="10"/>
             </Button>
         </WrapPanel>
 
-        <Label Content="Sources:" Grid.Row="2" Grid.Column="1"/>
-        <WrapPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
+        <Label Content="Sources:" Grid.Row="3" Grid.Column="1"/>
+        <WrapPanel Grid.Row="3" Grid.Column="2" VerticalAlignment="Center">
             <TextBlock x:Name="sourcesDirectoryName" Text="No directory choosen"/>
             <Button Cursor="Hand" Click="SourcesImport_Click">
                 <Image Source="/Resources/Images/download.png" Width="10" Height="10"/>
             </Button>
         </WrapPanel>
 
-        <Button x:Name="buttonSave" Width="40" Height="25" Margin="0,20,0,0" Cursor="Hand" Background="Green" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="SaveApp_Click">
+        <Button x:Name="buttonSave" Width="40" Height="25" Margin="0,20,0,0" Cursor="Hand" Background="Green" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="SaveApp_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

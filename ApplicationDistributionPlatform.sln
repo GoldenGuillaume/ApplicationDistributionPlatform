@@ -11,10 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.ViewModels", "DistributionPlatform.ViewModels\DistributionPlatform.ViewModels.csproj", "{E1A84B42-4A6B-4CC7-8960-2E5BC4634198}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Models", "DistributionPlatform.Models\DistributionPlatform.Models.csproj", "{D67DF0DD-E5AF-477C-9513-8F6BEF734763}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Infrastructure.Context", "DistributionPlatform.Infrastructure.Context\DistributionPlatform.Infrastructure.Context.csproj", "{C5D2D5B7-3A37-4291-9421-2E9120D1F4AC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Infrastructure.Entities", "DistributionPlatform.Infrastructure.Entities\DistributionPlatform.Infrastructure.Entities.csproj", "{62F6B5D5-4315-406A-9747-152BE158A90C}"
@@ -23,11 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure Layer", "Inf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Infrastructure.Providers", "DistributionPlatform.Infrastructure.Providers\DistributionPlatform.Infrastructure.Providers.csproj", "{F44667BB-51D3-4516-8367-69F434077ECE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Core.Services", "DistributionPlatform.Core.Services\DistributionPlatform.Core.Services.csproj", "{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistributionPlatform.Core", "DistributionPlatform.Core\DistributionPlatform.Core.csproj", "{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core layer", "Core layer", "{CF42942F-5B12-4F21-9EA6-5320493E91F2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributionPlatform.Core.Interfaces", "DistributionPlatform.Core.Interfaces\DistributionPlatform.Core.Interfaces.csproj", "{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +33,6 @@ Global
 		{52B8D004-F97D-4929-AD88-59FB9A82A4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52B8D004-F97D-4929-AD88-59FB9A82A4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52B8D004-F97D-4929-AD88-59FB9A82A4EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1A84B42-4A6B-4CC7-8960-2E5BC4634198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1A84B42-4A6B-4CC7-8960-2E5BC4634198}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1A84B42-4A6B-4CC7-8960-2E5BC4634198}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1A84B42-4A6B-4CC7-8960-2E5BC4634198}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D67DF0DD-E5AF-477C-9513-8F6BEF734763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D67DF0DD-E5AF-477C-9513-8F6BEF734763}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D67DF0DD-E5AF-477C-9513-8F6BEF734763}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D67DF0DD-E5AF-477C-9513-8F6BEF734763}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5D2D5B7-3A37-4291-9421-2E9120D1F4AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5D2D5B7-3A37-4291-9421-2E9120D1F4AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5D2D5B7-3A37-4291-9421-2E9120D1F4AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,10 +49,6 @@ Global
 		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,7 +58,6 @@ Global
 		{62F6B5D5-4315-406A-9747-152BE158A90C} = {2DAE2675-4E67-4A30-80B6-417CF23DE851}
 		{F44667BB-51D3-4516-8367-69F434077ECE} = {2DAE2675-4E67-4A30-80B6-417CF23DE851}
 		{C7D1E134-6FAE-4521-AE6A-89F6F4C047FE} = {CF42942F-5B12-4F21-9EA6-5320493E91F2}
-		{8BDEAD38-90E4-41FD-BBF0-A7CB385CC780} = {CF42942F-5B12-4F21-9EA6-5320493E91F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9B0AECA-5D96-4399-A632-4ACA06CF7F91}

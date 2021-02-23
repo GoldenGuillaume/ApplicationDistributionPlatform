@@ -30,7 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DistributionPlatform.Core\DistributionPlatform.Core.csproj" />
     <ProjectReference Include="..\DistributionPlatform.Infrastructure.Context\DistributionPlatform.Infrastructure.Context.csproj" />
+    <ProjectReference Include="..\DistributionPlatform.Infrastructure.Providers\DistributionPlatform.Infrastructure.Providers.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +45,23 @@
     <Resource Include="Resources\Images\settings.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ApplicationsListView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Views\ImportView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
   </ItemGroup>
 
 </Project>

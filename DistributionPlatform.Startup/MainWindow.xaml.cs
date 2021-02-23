@@ -10,17 +10,22 @@ namespace DistributionPlatform.Startup
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ImportView ImportViewElement { get; set; }
-        private ApplicationsListView ApplicationsListViewElement { get; set; }
+        private readonly ImportView _importView;
+        private readonly ApplicationsListView _appListView;
 
-        public MainWindow()
+        public MainWindow(ImportView importView, ApplicationsListView appListView)
         {
             InitializeComponent();
+
+            this._importView = importView;
+            this._appListView = appListView;
+
+            this._importView.DownloadEvent = new EventHandler(Import_DownloadEvent);
+
             buttonHome.IsEnabled = false;
             buttonImport.IsEnabled = true;
-            this.ImportViewElement = new ImportView();
-            this.ApplicationsListViewElement = new ApplicationsListView();
-            view.Content = this.ApplicationsListViewElement;
+
+            view.Content = this._appListView;
         }
 
         void Navigation_Click(object sender, RoutedEventArgs e)
@@ -30,14 +35,21 @@ namespace DistributionPlatform.Startup
             {
                 buttonImport.IsEnabled = true;
                 buttonHome.IsEnabled = false;
-                view.Content = this.ApplicationsListViewElement;
+                view.Content = this._appListView;
             }
             if (tag == "Import")
             {
                 buttonImport.IsEnabled = false;
                 buttonHome.IsEnabled = true;
-                view.Content = this.ImportViewElement;
+                view.Content = this._importView;
             }
+        }
+
+        void Import_DownloadEvent(object sender, EventArgs e)
+        {
+            buttonImport.IsEnabled = true;
+            buttonHome.IsEnabled = false;
+            view.Content = this._appListView;
         }
 
         void OpenSettings_Click(object sender, RoutedEventArgs e)

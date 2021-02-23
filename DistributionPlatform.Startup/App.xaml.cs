@@ -1,4 +1,7 @@
-﻿using DistributionPlatform.Infrastructure.Context;
+﻿using DistributionPlatform.Core.Interfaces;
+using DistributionPlatform.Core.Services;
+using DistributionPlatform.Infrastructure.Context;
+using DistributionPlatform.Infrastructure.Providers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,8 +29,14 @@ namespace DistributionPlatform.Startup
 
         private void ConfigureServices(IConfiguration configuration, IServiceCollection services)
         {
+            services.AddDbContext<DistributionPlatformContext>(options => options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")), contextLifetime: ServiceLifetime.Singleton);
+            
+            services.AddSingleton<IApplicationsProvider, ApplicationsProvider>();
+            services.AddSingleton<IApplicationService, ApplicationService>();
+
+            services.AddSingleton<Views.ImportView>();
+            services.AddSingleton<Views.ApplicationsListView>();
             services.AddSingleton<MainWindow>();
-            services.AddDbContext<DistributionPlatformContext>(options => options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
         }
 
         protected override async void OnStartup(StartupEventArgs e)

@@ -2,7 +2,6 @@
 using DistributionPlatform.Infrastructure.Entities;
 using DistributionPlatform.Infrastructure.Providers;
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 
@@ -17,7 +16,7 @@ namespace DistributionPlatform.Core.Services
             this._provider = provider;
         }
 
-        public void SaveApplication(string thumbnailPath, string sourcesDirectoryPath)
+        public void SaveApplication(string applicationName, string thumbnailPath, string sourcesDirectoryPath)
         {
             // recover thumbnail file contet
             byte[] thumbnail = File.ReadAllBytes(thumbnailPath);
@@ -38,18 +37,19 @@ namespace DistributionPlatform.Core.Services
             //process.Start();
 
             // save compiled sources into zip file and load it in memory
-            var tempFilePath = $"{Environment.CurrentDirectory}/tempBinfiles-{Guid.NewGuid()}";
-            ZipFile.CreateFromDirectory($"{sourcesDirectoryPath}/bin", tempFilePath);
+            var tempFilePath = $"{Environment.CurrentDirectory}/tempBinfiles-{Guid.NewGuid()}.zip";
+            ZipFile.CreateFromDirectory($"{sourcesDirectoryPath}", tempFilePath);
             byte[] sources = File.ReadAllBytes(tempFilePath);
 
             Application application = new Application()
             {
-                ApplicationName = "test",
+                ApplicationName = applicationName,
                 Thumbnail = thumbnail,
                 SourceFiles = sources
             };
             this._provider.InsertApplication(application);
             this._provider.SaveContext();
+            File.Delete(tempFilePath);
         }
     }
 }

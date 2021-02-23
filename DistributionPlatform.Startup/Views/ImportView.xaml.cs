@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using DistributionPlatform.Core.Interfaces;
+using Microsoft.Win32;
 using System;
 using System.IO;
 using System.Windows;
@@ -11,12 +12,16 @@ namespace DistributionPlatform.Startup.Views
     /// </summary>
     public partial class ImportView : UserControl
     {
-        private string ThumbnailFileName { get; set; } = null;
-        private string SourcesDirectoryName { get; set; } = null;
-        private string ApplicationName { get; set; } = null;
+        public event EventHandler DownloadEvent;
 
-        public ImportView()
+        private IApplicationService _service;
+        private string _thumbnailFileName = null;
+        private string _sourcesDirectoryName = null;
+        private string _applicationName = null;
+
+        public ImportView(IApplicationService service)
         {
+            this._service = service;
             InitializeComponent();
         }
 
@@ -27,7 +32,7 @@ namespace DistributionPlatform.Startup.Views
 
             if (fileDialog.ShowDialog() == true)
             {
-                this.ThumbnailFileName = fileDialog.FileName;
+                this._thumbnailFileName = fileDialog.FileName;
                 thumbnailFileName.Text = Path.GetFileName(fileDialog.FileName);
             }
         }
@@ -40,7 +45,7 @@ namespace DistributionPlatform.Startup.Views
 
                 if (res == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(browserDialog.SelectedPath))
                 {
-                    this.SourcesDirectoryName = browserDialog.SelectedPath;
+                    this._sourcesDirectoryName = browserDialog.SelectedPath;
                     sourcesDirectoryName.Text = new DirectoryInfo(browserDialog.SelectedPath).Name;
                 }
             }
@@ -48,10 +53,11 @@ namespace DistributionPlatform.Startup.Views
 
         void SaveApp_Click(object sender, RoutedEventArgs e)
         {
-            this.ApplicationName = AppName.Text;
-            if (!string.IsNullOrWhiteSpace(this.ApplicationName) && !string.IsNullOrWhiteSpace(this.SourcesDirectoryName) && !string.IsNullOrWhiteSpace(this.ThumbnailFileName))
+            this._applicationName = AppName.Text;
+            if (!string.IsNullOrWhiteSpace(this._applicationName) && !string.IsNullOrWhiteSpace(this._sourcesDirectoryName) && !string.IsNullOrWhiteSpace(this._thumbnailFileName))
             {
-                // get thumbnail and sources then save into database
+                this._service.SaveApplication(this._applicationName, this._thumbnailFileName, this._sourcesDirectoryName);
+                this.DownloadEvent(this, EventArgs.Empty);
             }
         }
     }

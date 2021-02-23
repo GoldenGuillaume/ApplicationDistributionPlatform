@@ -2,6 +2,6 @@
 {
     public interface IApplicationService
     {
-        void SaveApplication(string thumbnailPath, string sourcesDirectoryPath);
+        void SaveApplication(string applicationName, string thumbnailPath, string sourcesDirectoryPath);
     }
 }

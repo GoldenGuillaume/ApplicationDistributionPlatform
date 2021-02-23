@@ -8,12 +8,12 @@ namespace DistributionPlatform.Infrastructure.Context.Configurations
     {
         public void Configure(EntityTypeBuilder<Application> builder)
         {
-            builder.ToTable("Applications");
+            builder.ToTable("applications");
             builder.HasComment("Table containing application saved.");
 
-            builder.HasKey(e => e.Id).HasName("id");
+            builder.HasKey(e => e.Id);
 
-            builder.Property(e => e.Id).UseIdentityAlwaysColumn();
+            builder.Property(e => e.Id).HasColumnName("id").UseIdentityAlwaysColumn();
             builder.Property(e => e.CreationDate).IsRequired().HasColumnName("creation_date").HasColumnType("timestamp").HasDefaultValueSql("now()");
             builder.Property(e => e.ApplicationName).IsRequired().HasColumnName("application_name").HasMaxLength(70);
             builder.Property(e => e.Thumbnail).IsRequired().HasColumnName("thumbnail");

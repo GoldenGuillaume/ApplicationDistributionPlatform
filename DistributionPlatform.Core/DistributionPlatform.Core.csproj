@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DistributionPlatform.Core.Interfaces\DistributionPlatform.Core.Interfaces.csproj" />
     <ProjectReference Include="..\DistributionPlatform.Infrastructure.Entities\DistributionPlatform.Infrastructure.Entities.csproj" />
     <ProjectReference Include="..\DistributionPlatform.Infrastructure.Providers\DistributionPlatform.Infrastructure.Providers.csproj" />
   </ItemGroup>
